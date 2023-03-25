@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Add Image</title>
+<h1 align="center">A SURVEY: HOW YOU GO TO SCHOOL</h1>
+<script>
+function fruitorder()
+{
+  
+if(document.getElementById("1-5").checked == true)
+{
+  Mycar = "Not many come by car"; 
+}
+if(document.getElementById("1-5w").checked == true)
+{
+  Mywalk = "Not many walk to school";
+}
+if(document.getElementById("1-5b").checked == true)
+{
+  Mybus = "Not many come with school bus";
+}
+if(document.getElementById("6-10").checked == true)
+{
+  Mycar = "Half of the class come by car";
+}
+if(document.getElementById("6-10w").checked == true)
+{
+  Mywalk = "Half of the class walks to school";
+}
+if(document.getElementById("6-10b").checked == true)
+{
+  Mybus = "Half of the class comes by bus";
+}
+if(document.getElementById("11-20").checked == true)
+{
+  Mycar = "Majority of them come by car";
+}
+if(document.getElementById("11-20w").checked == true)
+{
+  Mywalk = "Majority of them walk to school";
+}
+if(document.getElementById("11-20b").checked == true)
+{
+  Mybus = "Majority of them come by bus";
+}
+
+document.getElementById("transport").innerHTML = Mycar;
+document.getElementById("transport1").innerHTML = Mywalk;
+document.getElementById("transport2").innerHTML = Mybus;
+return false;
+
+}
+</script>
+
+</head>
+<body>
+    <br><br>
+    <p style="text-align:center;">
+    <img src="static/car.jpg" width="150" alt="Logo">
+    <img src="static/walk.jpg" width="150" alt="Logo">
+    <img src="static/bus.jpg" width="150" alt="Logo"></p>
+    <br>
+    <form method="post" onsubmit="return fruitorder()">
+        <table align="center" border="1" width="400">
+            <tr>
+            <td>Class 2A-20</td><td align="30%">How You Come to School</td>
+            </tr>
+            <tr>
+            <td>Car </td><td><input type="radio" id="1-5" name="car" value="1-5">1-5
+                              <input type="radio" id="6-10" name="car" value="6-10">6-10
+                              <input type="radio" id="11-20" name="car" value="11-20">11-20
+            </td>
+            </tr>
+            <tr>
+            <td>Walk </td><td><input type="radio" id="1-5w" name="walk" value="1-5w">1-5
+                              <input type="radio" id="6-10w" name="walk" value="6-10w">6-10
+                              <input type="radio" id="11-20w" name="walk" value="11-20w">11-20
+            </td>
+            </tr>
+            <tr>
+            <td>Bus </td><td><input type="radio" id="1-5b" name="bus" value="1-5b">1-5
+                              <input type="radio" id="6-10b" name="bus" value="6-10b">6-10
+                              <input type="radio" id="11-20b" name="bus" value="11-20b">11-20
+            </td>
+            </tr>
+            <tr><td><input type="submit" value="Next"></td><td>Submit your survey outputs!Thank You</td></tr>
+            </table>
+    </form>
+    <br><br>
+<table align="center" border="1" width="400">
+<tr>
+<td width="33%">List :</td><td align="center">The Results </td></tr>
+<tr>
+<td width="33%">By Car: </td><td><div id="transport"></div></td>
+</tr>
+<tr>
+<td width="33%">Walking: </td><td><div id="transport1"></div></td>
+</tr>
+<tr>
+<td width="33%">By School Bus: </td><td><div id="transport2"></div></td>
+</tr>
+</table>    
+</body>
+</html>
